@@ -1,0 +1,10 @@
+package com.java.jpademo;
+
+public class Student {
+
+private int aid;
+private String aname;
+private String acolor;
+
+
+}

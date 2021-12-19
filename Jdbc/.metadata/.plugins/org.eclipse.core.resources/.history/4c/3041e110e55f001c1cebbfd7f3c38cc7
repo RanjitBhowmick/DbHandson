@@ -1,0 +1,11 @@
+package jdbcpractise;
+
+import java.sql.*;
+
+public class JdbcPractise {
+
+	public void createConnection() throws Exception {
+
+	}
+
+}

@@ -1,0 +1,43 @@
+package jdbcpractise;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class JdbcAction {
+
+	Connection conn;
+	Statement stmt;
+	ResultSet rs;
+
+	public void createConnection() throws Exception {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+		conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/demo", "root", "admin");
+		System.out.println("Creating connection!!");
+	}
+
+	public void showData() throws Exception {
+		stmt = conn.createStatement();
+		rs = stmt.executeQuery("Select * from department");
+		while (rs.next()) {
+			System.out.println();
+			System.out.print("  " + rs.getInt("empid"));
+			System.out.print("  " + rs.getString("deptname"));
+			System.out.print("  " + rs.getString("deptaddress"));
+			System.out.print("  " + rs.getString("deptincharge"));
+		}		
+	}
+
+	
+	public void updateData() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void closeConnection() throws Exception {
+		System.out.println("Closing connection!!");
+		conn.close();
+	}
+
+}

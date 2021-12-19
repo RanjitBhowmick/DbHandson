@@ -1,0 +1,25 @@
+package jdbcpractise;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class JdbcPractise {
+
+	public static void main(String args[]) throws Throwable {
+		Class.forName("com.mysql.jdbc.Driver");
+		Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/demo", "root", "admin");
+		Statement stmt = conn.createStatement();
+		ResultSet rs = stmt.executeQuery("Select * from department");
+
+		while (rs.next()) {
+			System.out.println(rs.getInt("empid"));
+			System.out.println(rs.getString("deptname"));
+			System.out.println(rs.getString("deptaddress"));
+			System.out.println(rs.getString("deptincharge"));
+		}
+
+	}
+
+}

@@ -1,0 +1,17 @@
+package jdbcpractise;
+
+import java.sql.*;
+import java.util.ResourceBundle;
+
+public class JdbcPractise {
+
+	public void createConnection() throws Exception {
+	    FileReader reader=new FileReader("db.properties");  
+	      
+	    Properties p=new Properties();  
+	    p.load(reader);  
+		
+		Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+	}
+
+}

@@ -1,0 +1,13 @@
+package jdbcpractise;
+
+import java.sql.*;
+
+public class JdbcPractise {
+
+	public void createConnection() throws Exception {
+
+		Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/demo", "root", "admin");
+
+	}
+
+}

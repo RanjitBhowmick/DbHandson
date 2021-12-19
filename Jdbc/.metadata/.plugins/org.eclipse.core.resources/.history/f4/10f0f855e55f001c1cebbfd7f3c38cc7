@@ -1,0 +1,13 @@
+package jdbcpractise;
+
+import java.sql.*;
+import java.util.ResourceBundle;
+
+public class JdbcPractise {
+
+	public void createConnection() throws Exception {
+		ResourceBundle rb = ResourceBundle.getBundle("application.properties");
+		Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
+	}
+
+}

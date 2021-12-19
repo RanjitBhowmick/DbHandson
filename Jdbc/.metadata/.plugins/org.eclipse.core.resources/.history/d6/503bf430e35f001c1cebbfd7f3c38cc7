@@ -1,0 +1,3 @@
+DBURL=jdbc:mysql://localhost/demo
+USERNAME=root
+PASSWORD=admin

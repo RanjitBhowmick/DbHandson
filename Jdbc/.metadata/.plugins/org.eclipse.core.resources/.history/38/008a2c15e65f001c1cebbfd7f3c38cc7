@@ -1,0 +1,16 @@
+package jdbcpractise;
+
+import java.sql.*;
+
+import com.mysql.cj.protocol.Resultset;
+
+public class JdbcPractise {
+
+	public void createConnection() throws Exception {
+
+		Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/demo", "root", "admin");
+		Statement stmt = conn.createStatement();
+		Resultset rs = stmt.executeQuery("Select * from department");
+	}
+
+}

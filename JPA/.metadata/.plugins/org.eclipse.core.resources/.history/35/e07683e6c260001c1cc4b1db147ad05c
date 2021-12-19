@@ -1,0 +1,14 @@
+package com.java.jpademo;
+
+/**
+ * Hello world!
+ *
+ */
+public class App {
+	public static void main(String[] args) {
+		Student stud = new Student();
+		stud.setAid(3);
+		stud.setAcolor("Blue");
+		stud.setAname("Ranjit");
+	}
+}
